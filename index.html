@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSmart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>EcoSmart</h1>
+        <p id="welcome-message"></p>
+    </header>
+    <main>
+        <!-- Welcome Page -->
+        <section id="welcome-page" class="container">
+            <h2>Introduce tu nombre</h2>
+            <input type="text" id="user-name" placeholder="Tu nombre...">
+            <button class="action-btn" onclick="startApp()">Comenzar</button>
+        </section>
+
+        <!-- Device Selection -->
+        <section id="device-selection" class="container hidden">
+            <h2>Selecciona tus electrodomésticos</h2>
+            <div id="device-list" class="device-list"></div>
+            <button class="action-btn" onclick="continueToStatus()">Continuar</button>
+        </section>
+
+        <!-- Device Status -->
+        <section id="device-status" class="container hidden">
+            <h2>Estado de los electrodomésticos</h2>
+            <ul id="status-list"></ul>
+            <button class="action-btn" onclick="disconnectAll()">Desconectar todos</button>
+            <button class="action-btn" onclick="goBack()">Regresar</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
